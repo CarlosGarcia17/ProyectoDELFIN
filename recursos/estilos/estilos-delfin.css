@@ -1,0 +1,1118 @@
+/* Hoja de Estilo para el Sitio Web del programa Delfín */
+
+/* ==================================================================== */
+/* Estilos generales para las páginas del Sitio */
+/* ==================================================================== */
+html {
+	margin:0; /* El margen, relleno y borde se ajustan a cero en cualquier objeto para lograr compatibilidad con la configuración predeterminada de los diversos navegadores */
+	border:0;
+	padding:0;
+}
+body {
+	margin:0; /* El margen, relleno y borde se ajustan a cero en cualquier objeto para lograr compatibilidad con la configuración predeterminada de los diversos navegadores */
+	border:0;
+	padding:0;
+	background:#fff url(../imagenes/fondo-pagina.jpg) repeat-x top center fixed;
+	color:#000; 
+	text-align:center; /* esto centra el contenedor en los navegadores IE 5*. El texto se ajusta posteriormente con el valor predeterminado de alineación que se le asigne a #container. */
+}
+#solicitud {
+	background-image:none;
+	background-color:#FFF;
+	font-family:Tahoma, Arial, Verdana, Geneva, sans-serif;
+}
+#contenedor {
+	margin:0 auto; /* los márgenes automáticos (conjuntamente con un ancho) centran la página si es necesario. */
+	border:0;
+	padding:0;
+	width:1000px; /* con este valor se ve bien en resolucion de 1024 x 768, para otras resoluciones el ancho es adecuado para la lectura. No se considera las resoluciónes de 800 x 600 ni menores. */
+	text-align:justify; /* esto anula text-align: center en el elemento body. */
+	background:url(../imagenes/fondo-contenedor.png) repeat-y top left;
+}
+
+
+
+
+	
+	/* ==================================== */
+	/* Estilos para el body de la solicitud */
+	/* ==================================== */
+	#solicitud h1 {
+		margin:0 0 20px 0;
+		border:0;
+		padding:0;
+		color:#003a5a;
+		font-size:11pt;
+	}
+	#solicitud h2 {
+		margin:20px 0;
+		border:0;
+		padding:0;
+		color:#0076bd;
+		font-size:9pt;
+		text-align:left;
+	}
+	#solicitud div {
+		text-align:left;
+		font-size:10pt;
+	}
+	#solicitud p {
+		text-align:justify;
+		font-size:10pt;
+	}
+	#solicitud .centrar {
+		text-align:center;
+	}
+	#solicitud .derecha {
+		text-align:right;
+	}
+	
+	
+	
+	
+	
+	/* ==================================================================== */
+	/* Estilos para los contenedores principales de la página */
+	/* ==================================================================== */
+	#contenedor #encabezado {
+		margin:0 11px;
+		border:0;
+		padding:0;
+		height:247px; /* alto igual al de la imagen de fondo. */
+		background:#fff url(../imagenes/fondo-encabezado.jpg) no-repeat top center;
+		position:relative; /* permite que los contenedores con posicion absoluta dentro, puedan tomar su posición relativa a este contenedor. */
+	}
+	#contenedor #contenido {
+		margin:20px 11px 20px 11px;
+		border:0;
+		padding:0 9px;
+		background-color:#FFF;
+	}
+	#contenedor #mapa {
+		margin:0 11px;
+		border:0;
+		padding:0 14px;
+		height:120px; /* alto igual al de la imagen de fondo. */
+		background:#fff url(../imagenes/fondo-mapa.png) repeat top left;
+	}
+	#contenedor #pie {
+		margin:0 11px;
+		border:0;
+		padding:0 9px;
+		height:50px; /* alto igual al de la imagen de fondo. */
+		background:#fff url(../imagenes/fondo-pie.png) repeat top left;
+	}
+
+
+
+
+
+		/* ==================================================================== */
+		/* Estilos para los componentes del encabezado de la pagina */
+		/* ==================================================================== */
+		#encabezado #logotipo {
+			margin:0;
+			border:0;
+			padding:0;
+			position:absolute;
+			top:25px;
+			left:21px;
+		}
+		#encabezado #tituloPrograma {
+			margin:0;
+			border:0;
+			padding:0;
+			position:absolute;
+			top:75px;
+			right:0px;
+		}
+		#encabezado #menuSitio {
+			margin:0;
+			border:0;
+			padding:0;
+			position:absolute;
+			top:225px;
+			left:9px;
+			height:33px;
+		}
+		#encabezado #menuAyuda {
+			margin:0;
+			border:0;
+			padding:0;
+			position:absolute;
+			top:10px;
+			right:9px;
+			height:33px;
+		}
+		#encabezado #menuRedes {
+			margin:0;
+			border:0;
+			padding:0;
+			position:absolute;
+			top:225px;
+			right:9px;
+			height:36px;
+			background-color:#FFF;
+		}
+
+		/* ==================================================================== */
+		/* Estilos para los componentes del contenido de la pagina */
+		/* ==================================================================== */
+		#contenido #columnaIzquierda {
+			margin:0;
+			border:0;
+			padding:0;
+			width:234px;
+			float:left;
+		}
+		#contenido #columnaDerecha {
+			margin:0;
+			border:0;
+			padding:0;
+			width:718px;
+			float:right;
+		}
+		#contenido .clear {
+			clear:both;
+		}
+
+		/* ==================================================================== */
+		/* Estilos para los componentes del mapa de la pagina */
+		/* ==================================================================== */
+		#mapa .columna {
+			margin:0;
+			border:0;
+			padding:0;
+			width:165px;
+			float:left;
+		}
+		#mapa .columnafinal {
+			margin:0;
+			border:0;
+			padding:0;
+			width:125px;
+			float:left;
+		}
+		
+		/* ==================================================================== */
+		/* Estilos para los componentes del pie de pagina */
+		/* ==================================================================== */
+		#pie #textopie {
+			margin:0;
+			border:0;
+			padding:18px 0 0 0;
+			width:766px;
+			float:left;
+			color:#FFF;
+			font-family:Arial, Helvetica, sans-serif;
+			font-weight:bold;
+			font-size:8pt;
+		}
+		#pie #validacion {
+			margin:0;
+			border:0;
+			padding:10px 0 0 0;
+			width:194px;
+			float:right;
+		}
+
+
+
+
+
+			/* ==================================================================== */
+			/* Estilos para las listas de los menús del encabezado y el contenido */
+			/* ==================================================================== */
+			#menuAyuda ul, #menuSitio ul, #menuRedes ul, #menuSeccion ul {
+				margin:0;
+				border:0;
+				padding:0;
+				list-style-type:none;
+			}
+			#menuAyuda li, #menuSitio li, #menuRedes li, #menuSeccion li {
+				margin:0;
+				border:0;
+				padding:0;
+				display:inline; /* esto permite que la lista aparezca en una sola línea */
+				vertical-align:top;
+			}
+			
+			/* ==================================================================== */
+			/* Estilos para la columna izquierda del contenido */
+			/* ==================================================================== */
+			#columnaIzquierda #busqueda {
+				margin:0;
+				border:0;
+				padding:0;
+				height:39px; /* alto igual al de la imagen de fondo. */
+				background:url(../imagenes/fondo-buscar.png) no-repeat top center;
+			}
+			#columnaIzquierda #usuarios {
+				margin:7px 0 0 0;
+				border:0;
+				padding:0;
+				height:182px; /* alto igual al de la imagen de fondo. */
+				background:url(../imagenes/fondo-usuarios.png) no-repeat top center;
+			}
+			#columnaIzquierda #encabezadoMenuSesion {
+				margin:7px 0 0 0;
+				border:0;
+				padding:0;
+				height:34px;
+				background:url(../imagenes/fondo-encabezadomenusesion.png) no-repeat top center;
+			}
+			#columnaIzquierda #menuSesion {
+				margin:0;
+				border:0;
+				padding:0;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:8pt;
+				background:url(../imagenes/fondo-contenidomenusesion.png) repeat top left;
+			}
+			#columnaIzquierda #pieMenuSesion {
+				margin:0;
+				border:0;
+				padding:0;
+				height:8px;
+				background:url(../imagenes/fondo-piemenusesion.png) no-repeat top center;
+			}
+			#columnaIzquierda #bannersIzquierda {
+				margin:0;
+				border:0;
+				padding:0;
+			}
+			
+			/* ==================================================================== */
+			/* Estilos para la columna derecha del contenido */
+			/* ==================================================================== */
+			#columnaDerecha #foto {
+				margin:0 0 10px 0;
+				border:0;
+				padding:0;
+			}
+			#columnaDerecha .banner {
+				margin:0 8px 0 0;
+				border:0;
+				padding:0;
+				width:234px;
+				height:127px;
+				float:left;
+			}
+			#columnaDerecha .ultimobanner {
+				margin:0;
+				border:0;
+				padding:0;
+				width:234px;
+				height:127px;
+				float:right;
+			}
+			#columnaDerecha #avisos {
+				margin:10px 0 0 0;
+				border:0;
+				padding:0;
+				width:355px;
+				float:left;
+			}
+			#columnaDerecha #bienvenida {
+				margin:10px 0 0 0;
+				border:0;
+				padding:0;
+				width:355px;
+				float:right;
+			}
+			#columnaDerecha #noticias{
+				margin:10px 0 0 0;
+				border:0;
+				padding:0;
+				clear:both;
+			}
+			#columnaDerecha #cuentas{
+				margin:30px 0 0 0;
+				border:0;
+				padding:0;
+				clear:both;
+			}
+			#columnaDerecha #titulo {
+				margin:0;
+				border:0;
+				padding:0;
+			}
+			#columnaDerecha #menuSeccion {
+				margin:0 0 10px 0;
+				border:0;
+				padding:0;
+				text-align:right;
+				height:23px;
+			}
+			#columnaDerecha #informacion{
+				margin:10px 5px 0 5px;
+				border:0;
+				padding:0;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:9pt;
+			}
+			#columnaDerecha br.limpiar{
+				clear:both;
+			}
+			
+			/* ==================================================================== */
+			/* Estilos para las columnas del mapa */
+			/* ==================================================================== */
+			.columna .titulomapa, .columnafinal .titulomapa  {
+				margin:10px 0;
+				border:0;
+				padding:0;
+			}
+			.columna a, .columna a:link, .columna a:visited, .columna a:active,
+			.columnafinal a, .columnafinal a:link, .columnafinal a:visited, .columnafinal a:active{
+				margin:0;
+				border:0;
+				padding:0; 
+				color:#000;
+				text-decoration:none;
+				font-family:Arial, Helvetica, sans-serif; 
+				font-weight:bold;
+				font-size:8pt;
+			}
+			.columna a:hover,
+			.columnafinal a:hover{
+				text-decoration:underline;
+			}
+		
+			
+				
+				
+			
+				/* ============================================================================ */
+				/* Estilos para el formulario de busqueda de la columna izquierda del contenido */
+				/* ============================================================================ */
+				#busqueda form, #usuarios form {
+					margin:0;
+					border:0;
+					padding:0;
+				}
+				#busqueda .inputbuscar {
+					margin:10px 0 0 10px;
+					border:1px solid #fff;
+					padding:1px;
+					width:135px;
+					height:16px;
+					font-size:8pt;
+					color:#999;
+					float:left;
+				}
+				#busqueda .inputbuscarDentro {
+					color:#000;
+				}
+				#busqueda #botonbuscar {
+					margin:8px 0 0 0;
+					border:0;
+					padding:0;
+					width:79px;
+					height:23px;
+					background:url(../imagenes/boton-buscar.png) no-repeat top center;
+					float:left;
+				}
+				
+				/* ============================================================================ */
+				/* Estilos para el formulario de usuarios de la columna izquierda del contenido */
+				/* ============================================================================ */
+				#usuarios .formulariousuarios {
+					margin:0;
+					border:0;
+					padding:50px 0 0 0;
+				}
+				#usuarios .labelsesion {
+					margin:0 0 10px 10px;
+					border:0;
+					padding:0;
+					line-height:20px;
+					font-family:Arial, Helvetica, sans-serif;
+					font-size:8pt;
+					color:#FFF;
+					font-weight:bold;
+					float:left;
+				}
+				#usuarios .inputsesion {
+					margin:0 10px 10px 0;
+					border:1px solid #fff;
+					padding:1px;
+					width:135px;
+					height:16px;
+					font-size:8pt;
+					float:right;
+				}
+				#usuarios .botonentrar {
+					margin:0 10px 20px 0;
+					border:0;
+					padding:0;
+					width:77px;
+					height:21px;
+					background:url(../imagenes/boton-usuarios.png) no-repeat top center;
+					float:right;
+				}
+				#usuarios div {
+					margin:0;
+					border:0;
+					padding:0;
+					clear:both;
+					text-align:center;
+				}
+				#usuarios a, #usuarios a:link, #usuarios a:visited, #usuarios a:active {
+					margin:0;
+					border:0;
+					padding:0; 
+					color:#fff;
+					text-decoration:none;
+					font-family:Arial, Helvetica, sans-serif; 
+					font-weight:bold;
+					font-size:8pt;
+				}
+				#usuarios a:hover {
+					text-decoration:underline;
+				}
+				
+				/* ========================================================================== */
+				/* Estilos para el menu de las sesiones de la columna izquierda del contenido */
+				/* ========================================================================== */
+				#menuSesion #perfil {
+					margin:0;
+					border:0;
+					padding:5px;
+					font-family:Arial, Helvetica, sans-serif;
+					font-size:8pt;
+					color:#e6541e;
+				}
+				#menuSesion h2 {
+					margin:0 5px;
+					border:0;
+					padding:2px 5px;
+					font-size:8pt;
+					color:#144780;
+					background-color:#c5d8e6;
+					text-align:right;
+				}
+				#menuSesion h3 {
+					margin:0 5px;
+					border:0;
+					padding:5px;
+					border-bottom:1px dotted #ccc;
+					font-size:8pt;
+					color:#e6541e;
+					text-align:right;
+				}
+				#menuSesion ul {
+					margin:0 5px;
+					padding:0;
+					border:0;
+					list-style-type: none;
+				}
+				#menuSesion li {
+					margin:0;
+					padding:5px 5px 5px 15px;
+					border:0;
+					border-bottom:1px dotted #ccc;
+					background-image:url(../imagenes/vineta-menu.png);
+					background-repeat: no-repeat;
+					background-position:center left;
+				}
+				#menuSesion li.ultimo {
+					margin:0;
+					padding:5px 5px 5px 15px;
+					border:0;
+				}
+				#menuSesion a, #menuSesion a:link, #menuSesion a:visited, #menuSesion a:active {
+					margin:0;
+					border:0;
+					padding:0; 
+					color:#fff;
+					text-decoration:none;
+					font-weight:bold;
+					font-size:8pt;
+				}
+				#menuSesion a:hover {
+					text-decoration:underline;
+				}
+				
+				/* ==================================================================== */
+				/* Estilos para los banners de la colunna de la izquierda del contenido */
+				/* ==================================================================== */
+				#bannersIzquierda .bannerIzq {
+					margin: 10px 0 0 0;
+					border:0;
+					padding:0;
+				}
+				
+				/* ====================================================================================== */
+				/* Estilos para los avisos, noticias y cuentas de la columna de la derecha del contenido  */
+				/* ====================================================================================== */
+				#avisos .aviso, #noticias .aviso, #cuentas .aviso {
+					margin:0;
+					border:0;
+					padding:0;
+					font-family:Arial, Helvetica, sans-serif;
+					font-size:9pt;
+				}
+				#avisos .texto-naranja, #noticias .texto-naranja, #cuentas .texto-naranja {
+					font-size:8pt;
+					color:#e7571e;
+				}
+				#avisos ul, #noticias ul, #cuentas ul {
+					margin:0;
+					padding:0;
+					border:0;
+					list-style-type: none;
+				}
+				#avisos li, #noticias li, #cuentas li {
+					margin:15px 0 0 0;
+					padding:0 5px 5px 20px;
+					border:0;
+					border-bottom:1px dotted #003a5a;
+					background-image: url(../imagenes/vineta.png);
+					background-repeat: no-repeat;
+					background-position:top left;
+				}
+				#avisos a, #avisos a:link, #avisos a:visited, #avisos a:active,
+				#noticias a, #noticias a:link, #noticias a:visited, #noticias a:active,
+				#cuentas a, #cuentas a:link, #cuentas a:visited, #cuentas a:active{
+					margin:0;
+					border:0;
+					padding:0; 
+					color:#144780;
+					text-decoration:none;
+					font-weight:bold;
+					font-size:8pt;
+				}
+				#avisos a:hover, #noticias a:hover , #cuentas a:hover{
+					text-decoration:underline;
+				}
+				
+				/* ==================================================================== */
+				/* Estilos para la bienvenida de la columna de la derecha del contenido */
+				/* ==================================================================== */
+				#bienvenida #mensaje {
+					margin:10px 5px 0 5px;
+					padding:0;
+					border:0;
+					font-family:Arial, Helvetica, sans-serif;
+					font-size:9pt;
+				}
+				#bienvenida .texto-azul {
+					color:#72a0c0;
+				}
+				#bienvenida #fotoMensaje {
+					margin:0 10px 0 0;
+					border:0;
+					padding:0;
+					width:134px;
+					height:134px;
+					float:left;
+				}
+				
+				/* ===================================================================== */
+				/* Estilos para la información de la columna de la derecha del contenido */
+				/* ===================================================================== */
+				#informacion h1 {
+					margin:0 -5px;
+					border:0;
+					padding:2px 5px;
+					border-bottom:1px dotted #003a5a;
+					border-top:1px dotted #003a5a;
+					font-size:12pt;
+					color:#3797de;
+				}
+				#informacion h2 {
+					margin:15px 0 10px 0;
+					border:0;
+					padding:2px 0;
+					font-size:10pt;
+					color:#e6541e;
+				}
+				#informacion .texto-naranja {
+					font-size:8pt;
+					color:#e7571e;
+				}
+				#informacion .centrar {
+					text-align:center;
+				}
+				#informacion .derecha {
+					text-align:right;
+				}
+				#informacion .textorojo {
+					color:#F00;
+				}
+				#informacion .textoazul {
+					color:#0076bd;
+				}
+				#informacion .textonaranja {
+					color:#F60;
+				}
+				#informacion .textoverde {
+					color:#060;
+				}
+				#informacion .textovino {
+					color:#600;
+				}
+				#informacion ul.listavineta {
+					margin:0;
+					padding:0;
+					border:0;
+					list-style-type: none;
+				}
+				#informacion li.vineta {
+					margin:0 0 10px 0;
+					padding:0 5px 0 20px;
+					border:0;
+					background-image: url(../imagenes/vineta.png);
+					background-repeat: no-repeat;
+					background-position:top left;
+				}
+				#informacion ol.exp {
+					margin:0;
+					padding:0 0 0 15px;
+				}
+				#informacion a, #informacion a:link, #informacion a:visited, #informacion a:active {
+					margin:0;
+					border:0;
+					padding:0; 
+					color:#144780;
+					text-decoration:none;
+					font-weight:bold;
+					font-size:8pt;
+				}
+				#informacion a:hover {
+					text-decoration:underline;
+				}
+				#informacion img {
+					vertical-align:middle;
+				}
+				#informacion img.afiliada {
+					margin:0 10px 0 0;
+				}
+				#informacion .importante {
+					margin:0;
+					border:1px solid #333;
+					padding:10px;
+					background-color:#CCC;
+				}
+				#informacion .directorio {
+					margin:0;
+					border:0;
+					padding:5px 0 0 0;
+					overflow:auto; /* El overflow y el height se utilizan como hack para que versiones de ie contengan los elementos flotantes */
+					height:1%; /* es necesario determinar un valor para la altura para que ie6 contenga los elementos flotantes */
+				}
+				#informacion .regresar {
+					margin:0;
+					border:0;
+					padding:5px 0 50px 0;
+					text-align:right;
+				}
+				#informacion p.advertencia {
+					margin:0;
+					border:1px solid #ff0;
+					padding:5px 5px 5px 26px;
+					background-repeat:no-repeat;
+					background-position:center left;
+					background-image:url(../imagenes/icono-advertencia.gif);
+					font-weight:bold;
+				}
+				#informacion p.error {
+					margin:0;
+					border:1px solid #f00;
+					padding:5px 5px 5px 26px;
+					background-repeat:no-repeat;
+					background-position:center left;
+					background-image:url(../imagenes/icono-error.gif);
+					font-weight:bold;
+				}
+				#informacion #formulario {
+					margin:0;
+					border:0;
+					padding:0;
+				}
+				#informacion #tabla {
+					width:708px;
+					border-collapse:collapse;
+				}
+				#informacion #tabladirectorio {
+					width:708px;
+					border-collapse:collapse;
+				}
+		
+				
+				
+				
+					/* ================================================================================================ */
+					/* Estilos para el perfil de usuario del menu de las sesiones de la columna izquierda del contenido */
+					/* ================================================================================================ */
+					#perfil #fotoPerfil {
+						margin:0 5px 0 0;
+						border:0;
+						padding:0;
+						width:80px;
+						height:80px;
+						float:left;
+					}
+					#perfil #nombrePerfil {
+						margin:0;
+						border:0;
+						padding:2px 5px;
+						color:#144780;
+						background-color:#c5d8e6;
+						font-weight:bold;
+					}
+					#perfil #salirPerfil {
+						margin:5px 0 10px 0;
+						border:0;
+						padding:0 5px 0 0;
+						text-align:right;
+					}
+					#perfil .limpia {
+						margin:0;
+						border:0;
+						padding:0;
+						font-size:0;
+						clear:both;
+					}
+					#perfil a.salir, #perfil a.salir:link, #perfil a.salir:visited, #perfil a.salir:active, #perfil a.salir:hover {
+						color:#fff;
+					}
+					
+					/* =========================================================================================================== */
+					/* Estilos para el directorio de consejeros dentro de la información de la columna de la derecha del contenido */
+					/* =========================================================================================================== */
+					.directorio .fotodir {
+						margin:0 10px 0 0; 
+						border:0;
+						padding:0;
+						width:80px;
+						vertical-align:middle;
+						float:left;
+					}
+					.directorio .datosdir {
+						margin:0; 
+						border:0;
+						padding:0;
+						width:100%;
+						background-color:#c5d8e6;
+						float:left;
+					}
+					
+					/* =============================================================================================== */
+					/* Estilos para las tablas dentro de la información de la columna de la derecha del contenido */
+					/* =============================================================================================== */
+					#tabla th {
+						margin:0;
+						border:0;
+						padding:2px;
+						background-color:#144780;
+						color:#fff;
+						text-align:left;
+						font-size:12px;
+					}
+					#tabladirectorio th {
+						margin:0;
+						border:0;
+						padding:2px;
+						color:#e6541e;
+						text-align:center;
+						font-size:12px;
+						font-weight:bold;
+					}
+					#tabla td {
+						margin:0;
+						border-bottom:1px solid #003a5a;
+						padding:2px;
+						text-align:left;
+						font-size:11px;
+					}
+					#tabla td.subtema {
+						margin:0;
+						border-bottom:1px solid #003a5a;
+						padding:2px;
+						background-color:#FFC;
+						color:#144780;
+						text-align:center;
+						font-size:12px;
+						font-weight:bold;
+					}
+					#tabladirectorio td {
+						margin:0;
+						border:0;
+						padding:0;
+						height:80px;
+						text-align:left;
+						font-size:11px;
+					}
+					#tabladirectorio ol {
+						margin:0 0 0 20px;
+						padding:0;
+						border:0;
+					}
+					#tabladirectorio td.fondodir {
+						padding:0 0 0 5px;
+						background-color:#c5d8e6;
+					}
+					#tabladirectorio td.piedir {
+						height:25px;
+					}
+					#tabla tr.alt {
+						color:#000;
+						background-color:#eee;
+					}
+					#tabla tr.sobre {
+						color:#000;
+						background-color:#c5d8e6;
+					}
+					#tabla tr.blanco {
+						color:#000;
+						background-color:#fff;
+					}
+					td {
+						text-align:left;
+					}
+					td p {
+						margin: 0;
+					}
+					
+					/* =============================================================================================== */
+					/* Estilos para los formularios dentro de la información de la columna de la derecha del contenido */
+					/* =============================================================================================== */
+					#formulario form {
+						margin:0;
+						border:0;
+						padding:0;
+					}
+					#formulario fieldset {
+						margin:0 auto; /* los valores auto permiten que el fieldset se centre */
+						border:1px dotted #003a5a;
+						padding:0 10px 5px 10px;
+						display:block; /* Para que versiones de ie no suban el contenido de abajo al lado del fieldset */
+					}
+					#formulario #fieldsetsoporte {
+						width:450px;
+					}
+					#formulario #fieldsetolvide {
+						width:500px;
+					}
+					#formulario #fieldsetregistro {
+						width:686px;
+					}
+					#formulario #fieldsetbuscar {
+						width:200px;
+					}
+					#formulario #fieldsetdocumentos {
+						width:686px;
+					}
+					#formulario #fieldsetevaluacion {
+						margin:0 auto; /* los valores auto permiten que el fieldset se centre */
+						border:0;
+						padding:0;
+						display:block;
+					}
+					#formulario #fieldsetboton {
+						border:0;
+					}
+					#formulario .centrar {
+						text-align:center;
+					}
+					#formulario .estiloadv {
+						border:1px solid #ff0;
+						padding:0;
+						background-color:#ffffe1;
+						background-repeat:no-repeat;
+						background-position:top left;
+						background-image:url(../imagenes/icono-requerido.gif);
+					}
+					#formulario .estiloerr {
+						border:1px solid #f00;
+						padding:0;
+						background-color:#ffffe1;
+						background-repeat:no-repeat;
+						background-position:top left;
+						background-image:url(../imagenes/icono-requerido.gif);
+					}
+					#formulario .indicaadv {
+						border:0;
+						padding:5px 5px 5px 26px;
+						background-color:transparent;
+						background-repeat:no-repeat;
+						background-position:center left;
+						background-image:url(../imagenes/icono-advertencia.gif);
+						color:#f00;
+						font-weight:bold;
+					}
+					#formulario .indicaerr {
+						border:0;
+						padding:5px 5px 5px 26px;
+						background-color:transparent;
+						background-repeat:no-repeat;
+						background-position:center left;
+						background-image:url(../imagenes/icono-error.gif);
+						color:#f00;
+						font-weight:bold;
+					}
+						
+					
+					
+					
+					
+						/* ========================================================================================================================== */
+						/* Estilos para los conjuntos de campos de los formularios dentro de la información de la columna de la derecha del contenido */
+						/* ========================================================================================================================== */
+						fieldset legend {
+							margin:0;
+							border:0;
+							padding:10px;
+							font-weight:bold;
+						}
+						fieldset div {
+							margin:0 0 5px 0;
+							overflow:auto; /* El overflow y el height se utilizan como hack para que versiones de ie contengan los elementos flotantes */
+							height:1%; /* es necesario determinar un valor para la altura para que ie6 contenga los elementos flotantes */
+						}
+						fieldset label {
+							margin:0 5px 0 0;
+							border:0;
+							padding:0;
+							float:left;
+							line-height:20px;
+							color:#000;
+							background-color:#c5d8e6;
+							font-weight:bold;
+							text-align:right;
+						}
+						fieldset input {
+							margin:0;
+							border:1px solid #003a5a;
+							padding:1px;
+							height:16px;
+							font-size:8pt;
+						}
+						fieldset select {
+							margin:0;
+							border:1px solid #003a5a;
+							padding:1px;
+							height:20px;
+							font-size:8pt;
+						}
+						fieldset textarea {
+							margin:0;
+							border:1px solid #003a5a;
+							padding:1px;
+							font-size:8pt;
+						}
+						fieldset small {
+							margin:0 0 0 210px;
+							border:0;
+							padding:3px 0;
+							display: block;
+							font-family:Arial, Verdana, Geneva, sans-serif;
+							font-size:7.5pt;
+						}
+						fieldset .notas {
+							margin:0;
+							border:1px dotted #003a5a;
+							padding:5px;
+							width:200px;
+							float:right;
+							background-color:#ffffe1;
+							color:#666;
+							font-size:8pt;
+						}
+						fieldset h4 {
+							margin:0;
+							border-width:0 0 1px 0;
+							border-style:solid;
+							border-color:#666666;
+							padding:0 2px 6px 26px;
+							background-repeat:no-repeat;
+							background-position:top left;
+							background-image:url(../imagenes/icono-informacion.gif);
+							color:#666666;
+							font-size:8pt;
+						}
+						fieldset .ultimo {
+							margin:0;
+						}
+					
+						/* =============================================================================================== */
+						/* Estilos particulares para los formularios dentro de la información de la columna de la derecha del contenido */
+						/* =============================================================================================== */
+						#fieldsetsoporte .labelsoporte {
+							width:169px; /* mas 5px de relleno para separarlo del input=174px */
+						}
+						#fieldsetsoporte .inputsoporte {
+							width:260px; /* mas 2px de borde, mas 2px de relleno, mas 2px para borde cuando hay aviso de advertencia o error=266px */
+						}
+						#fieldsetsoporte .selectsoporte {
+							width:264px; /* mas 2px de borde, mas 2px de relleno, mas 2px para borde cuando hay aviso de advertencia o error + 4 para que se vea del mismo tamaño que los inputs=280px */
+						}
+						#fieldsetolvide .labelolvide {
+							width:200px; /* mas 5px de relleno para separarlo del input=205px */
+						}
+						#fieldsetolvide .inputolvide {
+							width:289px; /* mas 2px de borde, mas 2px de relleno, mas 2px para borde cuando hay aviso de advertencia o error=295px */
+						}
+						#fieldsetregistro .labelregistro {
+							width:205px; /* mas 5px de relleno para separarlo del input=210px */
+						}
+						#fieldsetregistro .inputregistro {
+							width:250px; /* mas 2px de borde, mas 2px de relleno, mas 2px para borde cuando hay aviso de advertencia o error=276px */
+						}
+						#fieldsetregistro .inputregistrodia {
+							width:45px; 
+						}
+						#fieldsetregistro .inputregistromes {
+							width:85px; 
+						}
+						#fieldsetregistro .inputregistroyear {
+							width:55px; 
+						}
+						#fieldsetregistro .inputregistronum {
+							width:60px; 
+						}
+						#fieldsetregistro .inputregistrogrado {
+							width:150px; 
+						}
+						#fieldsetregistro .selectregistro {
+							width:254px; /* mas 2px de borde, mas 2px de relleno, mas 2px para borde cuando hay aviso de advertencia o error + 4 para que se vea del mismo tamaño que los inputs=280px */
+						}
+						#fieldsetregistro .selectregistroinvestigador {
+							width:474px; /* mas 2px de borde, mas 2px de relleno, mas 2px para borde cuando hay aviso de advertencia o error + 4 para que se vea del mismo tamaño que los inputs=280px */
+						}
+						#fieldsetboton .inputboton {
+							padding:5px;
+							height:25px;
+							font-weight:bold;
+							background-color:#c5d3e0;
+						}
+						#fieldsetboton .inputboton:hover { 
+							color:#fff;
+							background-color:#144780;
+							cursor:pointer;
+						}
+						#fieldsetbuscar .inputbotonbuscar {
+							padding:5px;
+							height:25px;
+							font-weight:bold;
+							background-color:#c5d3e0;
+							width:80px; /* mas 5px de relleno para separarlo del input=85px */
+						}
+						#fieldsetbuscar .inputbotonbuscar:hover {
+							color:#fff;
+							background-color:#144780;
+							cursor:pointer;
+						}
+						#fieldsetbuscar .inputbuscar {
+							width:109px; /* mas 2px de borde, mas 2px de relleno, mas 2px para borde cuando hay aviso de advertencia o error=115px */
+						}
+						#fieldsetdocumentos .labelcheckbox {
+							float:right;
+							text-align:left;
+							width:650px;
+						}
+						#fieldsetevaluacion .inputpuntajeeval {
+							width:30px; 
+						}
