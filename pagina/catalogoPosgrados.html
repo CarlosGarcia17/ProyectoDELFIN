@@ -10,7 +10,7 @@
 		<link href='../recursos/estilos/estilos-delfin.css' rel='stylesheet' type='text/css' />
 		<script src="../recursos/scripts/scripts-delfin.js" language="javascript" type="text/javascript"></script>
 		<script src="../recursos/librerias/ckeditor/ckeditor.js" language="javascript" type="text/javascript"></script>
-		<title>Control de Estudiantes Registrados - Sesión de Consejero - Programa Delfín</title>
+		<title>Posgrados - Divulgación - Programa Delfín</title>
 	</head>
 
 	<body>
@@ -55,157 +55,25 @@
 			
 			
 			<div id='contenido'>
-                <div id='columnaIzquierda'>
+				<div id='columnaIzquierda'>	
 					<div id='busqueda'>
 						<form id='form1' name='form1' action='../ayuda/busqueda.php' method='get' onSubmit='return validabusqueda(this);'>
 							<input name='buscar' id='buscar' class='inputbuscar' type='text' tabindex='1' value='Escribe lo que buscas' onFocus='buscar.value=""; buscar.style.color="#000";' onBlur='if(buscar.value==""){ buscar.value="Escribe lo que buscas"; buscar.style.color="#999";}' title='Escribe lo que buscas' />
 							<input name='botonbuscar' id='botonbuscar' class='botonbuscar' type='submit' tabindex='2' value='' title='Buscar' />
 						</form>
 					</div>
-					<div id='encabezadoMenuSesion'></div>
-                    <div id='menuSesion'>
-						<div id='perfil'>
-							<div id='nombrePerfil'>Guadalupe Sarai Cañas Hurtado</div>
-							<div id='fotoPerfil' title='Guadalupe Sarai Cañas Hurtado'><img src='../recursos/imagenes/foto-usuariofemenino.jpg' border='0' width='80' height='80' alt='Guadalupe Sarai Cañas Hurtado' /></div>
-							<div id='salirPerfil'><a class='salir' href='../usuarios/inicio-sesion-salir.php' title='Salir de la Sesión de usuario'><img src='../recursos/imagenes/icono-salir.png' border='0' width='10' height='10' alt='Salir de la Sesión de usuario' /> Salir</a></div>
-							<div><a href='../usuarios/consejero-inicio-abrir.php' title='Inicio de la Sesión'><img src='../recursos/imagenes/icono-inicio.png' border='0' width='10' height='10' alt='Inicio de la Sesión' /> Inicio de mi sesión</a></div>
-							<div><a href='../usuarios/consejero-ficha-ver.php' title='Ver ficha de datos'><img src='../recursos/imagenes/icono-ficha.png' border='0' width='10' height='10' alt='Ver ficha de datos' /> Mi Ficha de Datos</a></div>
-							<div><a href='../usuarios/consejero-datos-abrir.php' title='Modificar mis Datos'><img src='../recursos/imagenes/icono-modificar.png' border='0' width='10' height='10' alt='Modificar mis Datos' /> Modificar mis Datos</a></div>
-							<br class='limpia' />
+					<div id='usuarios'>
+						<div class='formulariousuarios'>
+							<form id='form2' name='form2' action='../usuarios/inicio-sesion-registrar.php' enctype='multipart/form-data' method='post'>
+								<label for='login' class='labelsesion'>Usuario:</label>
+								<input name='login' id='login' class='inputsesion' type='text' tabindex='3' value='' title='Escriba su nombre de usuario' />
+								<label for='pass' class='labelsesion'>Contraseña:</label>
+								<input name='pass' id='pass' class='inputsesion' type='password' tabindex='4' value='' title='Escriba su contraseña' />
+								<input name='boton' id='boton' class='botonentrar' type='submit' tabindex='5' value='' title='Enviar los datos para ingresar a su sesión' />
+							</form>
+							<div><a href='../usuarios/inicio-olvide-abrir.php'>¿Olvidaste tus datos de Sesión?</a></div>
 						</div>
-						<h2>Mi Participación</h2>
-						<ul>
-							<li><a href='../usuarios/consejero-institucion-abrir.php' title='Modificar datos de mi Institución'>Actualizar datos de mi Institución</a></li>
-							<li class='ultimo'><a href='../usuarios/consejero-usuario-abrir.php' title='Cambiar mis datos de Usuario'>Cambiar mis datos de Usuario</a></li>
-							<!--<li><a href='../usuarios/consejero-apoyo-abrir.php' title='Apoyo al congreso nacional'>Apoyo Congreso</a></li>-->
-                        </ul>
-						
-						
-						
-						
-						
-						<!--<h2>Encuentro</h2>
-						<h3>Control</h3>
-						<ul>
-							<li><a href='../usuarios/consejero-controlprofesionales-consultar.php' title='Control de Profesionales de la Investigación'>Profesionales Registrados</a></li>
-                        </ul>
-						<h3>Reportes</h3>
-						<ul>
-							<li class='ultimo'><a href='../usuarios/consejero-reporteenmesas-consultar.php' title='Reporte de Profesionales por Mesa de Trabajo'>Mesas de Trabajo</a></li>
-                        </ul>-->
-						
-						
-						
-						
-						
-						
-						
-						<h2>Mis Estudiantes</h2>
-						<h3>Administración</h3>
-						<ul>
-							<li><a href='../usuarios/consejero-control-registrosest-consultar.php' title='Control de Estudiantes Registrados'>Registrados</a></li>
-							<!--
-							<li><a href='../usuarios/consejero-controlaccesosest-consultar.php' title='Control de Acceso de Estudiantes'>Accesos</a></li>
-							<li><a href='../usuarios/consejero-controlsolicitudesest-consultar.php' title='Control de Solicitud de Estudiantes'>Solicitudes</a></li>
-							<li><a href='../usuarios/consejero-controlveranosest-consultar.php' title='Control de Verano de Estudiantes'>Estancias</a></li>
-							<li><a href='../usuarios/consejero-controlubicacionest-consultar.php' title='Control de Participación de Estudiantes'>Ubicación</a></li>
-							-->
-						</ul>
-						<h3>Controles</h3>
-						<ul>
-                            <li><a href='../usuarios/consejero-recibirdocumentos-seleccionar.php' title='Recibir documentos de estudiantes'>Recibir Documentos</a></li>
-							<li><a href='../usuarios/consejero-marcaraceptados-abrir.php' title='Marcar estudiantes aceptados para realizar la estancia de verano'>Confirmar Verano</a></li>
-							<!--
-							<li><a href='../usuarios/consejero-marcarasistencia-abrir.php' title='Marcar estudiantes que asistiran al congreso nacional'>Confirmar Congreso</a></li>
-							-->
-						</ul>
-						<h3>Reportes</h3>
-						<ul>
-							<li><a href='../usuarios/consejero-reportedocumentos-consultar.php' title='Reporte de Estudiantes con Documentos'>Solicitudes</a></li>
-							<li><a href='../usuarios/consejero-reporteevaluaciones-consultar.php' title='Reporte de Estudiantes con Evaluación'>Evaluados</a></li>
-							<li><a href='../usuarios/consejero-reporteaceptados-consultar.php' title='Reporte de Estudiantes Aceptados'>Aceptados</a></li>
-							<!--
-							<li><a href='../usuarios/consejero-reporteestancias-consultar.php' title='Reporte de Estudiantes en Estancia'>Estancias</a></li>
-							-->
-							<!--
-							<li><a href='../usuarios/consejero-reportesolicitudes-consultar.php' title='Reporte de Estudiantes con Registro'>Registrados</a></li>
-							<li><a href='../usuarios/consejero-reporteenestancia-consultar.php' title='Reporte de Estudiantes en Estancia'>En Estancia</a></li>
-							<li><a href='../usuarios/consejero-reporteconaval-consultar.php' title='Reporte de Estudiantes con Avala'>Avalados</a></li>
-							<li><a href='../usuarios/consejero-reporteconresumen-consultar.php' title='Reporte de Estudiantes con Resumen'>Con Resumen</a></li>
-							<li><a href='../usuarios/consejero-reportereconocimientosverano-consultar.php' title='Reporte de Estudiantes con Reconocimiento de Estancia'>Con Reconocimiento de Estancia</a></li>
-							<li><a href='../usuarios/consejero-reporteencongreso-consultar.php' title='Reporte de Estudiantes que Asistirán al Congreso Nacional'>Asistiran a Congreso</a></li>
-							<li><a href='../usuarios/consejero-reportellegaroncongreso-consultar.php' title='Reporte de Estudiantes que llegaron al Congreso Nacional'>En Congreso</a></li>
-							-->
-						</ul>
-						<h3>Estadísticas</h3>
-						<ul>
-							<li><a href='../usuarios/consejero-estestxgen-consultar.php' title='Estudiantes por Género'>Género (Sexo)</a></li>
-							<li><a href='../usuarios/consejero-estestxare-consultar.php' title='Estudiantes por Área de su Carrera'>Área de su Carrera</a></li>
-							<li><a href='../usuarios/consejero-estestxinsinv-consultar.php' title='Estudiantes por Institución de Estancia'>Institución de Estancia</a></li>
-							<li><a href='../usuarios/consejero-estestxedoinv-consultar.php' title='Estudiantes por Estado de Estancia'>Estado de Estancia</a></li>
-							<li class='ultimo'><a href='../usuarios/consejero-estestxpaiinv-consultar.php' title='Estudiantes por Pais de Estancia'>Pais de Estancia</a></li>
-							<!--
-							<li><a href='../usuarios/consejero-estestxmed-consultar.php' title='Estudiantes por Servicio Médico'>Servicio Médico</a></li>
-							-->
-						</ul>
-						
-						
-						
-						
-						
-						
-						<h2>Mis Investigadores</h2>
-						<h3>Administración</h3>
-						<ul>
-							<li><a href='../usuarios/consejero-control-registrosinv-consultar.php' title='Control de Investigadores Registrados'>Registrados</a></li>
-							<!--<li><a href='../usuarios/consejero-controlaccesosinv-consultar.php' title='Control de Acceso de Investigadores'>Accesos</a></li>
-							<li><a href='../usuarios/consejero-controlsolicitudesinv-consultar.php' title='Control de Solicitudes de Investigadores'>Solicitudes</a></li>
-							<li><a href='../usuarios/consejero-controlveranoinv-consultar.php' title='Control de Verano de Investigadores'>En Verano</a></li>-->
-						</ul>
-						<h3>Estadísticas</h3>
-						<ul>
-							<li><a href='../usuarios/consejero-estinvxgen-consultar.php' title='Investigadores por Género'>Género (Sexo)</a></li>
-							<li><a href='../usuarios/consejero-estinvxare-consultar.php' title='Investigadores por Área de Conocimiento Principal'>Área de Conocimiento Principal</a></li>
-							<li><a href='../usuarios/consejero-estinvxgra-consultar.php' title='Investigadores por Grado Académico'>Grado Académico</a></li>
-							<li><a href='../usuarios/consejero-estinvxper-consultar.php' title='Investigadores por Perfil PROMEP'>Perfil PROMEP</a></li>
-							<li class='ultimo'><a href='../usuarios/consejero-estinvxnsn-consultar.php' title='Investigadores por Nivel SNI'>Nivel SNI</a></li>
-                        </ul>
-						
-						
-						
-						
-						
-						
-						<h2>Estudiantes Visitantes</h2>
-						<h3>Administración</h3>
-						<ul>
-							<li><a href='../usuarios/consejero-control-registrosvis-consultar.php' title='Control de Estudiantes Visitantes Registrados'>Registrados</a></li>
-							<!--
-							<li><a href='../usuarios/consejero-controlsolicitudesvis-consultar.php' title='Control de Solicitud de Estudiantes'>Registrados</a></li>
-							<li><a href='../usuarios/consejero-controlveranosvis-consultar.php' title='Control de Verano de Estudiantes'>Verano</a></li>
-							<li><a href='../usuarios/consejero-controlubicacionvis-consultar.php' title='Control de Participación de Estudiantes'>Ubicación</a></li>
-							-->
-						</ul>
-						<h3>Reportes</h3>
-						<ul>
-							<li><a href='../usuarios/consejero-controlubicacionvis-consultar.php' title='Reporte de Estudiantes'>Ubicación</a></li>
-						</ul>
-						<h3>Estadísticas</h3>
-						<ul>
-							<li><a href='../usuarios/consejero-estvisxgen-consultar.php' title='Estudiantes Visitantes por Género'>Género (Sexo)</a></li>
-							<li><a href='../usuarios/consejero-estvisxare-consultar.php' title='Estudiantes Visitantes por Área de su Carrera'>Área de su Carrera</a></li>
-							<li><a href='../usuarios/consejero-estvisxins-consultar.php' title='Estudiantes Visitantes por Institución de Estancia'>Institución de Procedencia</a></li>
-							<li class='ultimo'><a href='../usuarios/consejero-estvisxedo-consultar.php' title='Estudiantes Visitantes por Estado de Estancia'>Estado de Procedencia</a></li>
-							<!--
-							<li><a href='../usuarios/consejero-estvisxmed-consultar.php' title='Estudiantes Visitantes por Servicio Médico'>Servicio Médico</a></li>
-							-->
-						</ul>
-						
-						
-						
-						
-                    </div>
-                    <div id='pieMenuSesion'></div>
+					</div>
 					<div id='bannersIzquierda'>
 						<div class='bannerIzq'><a href='../estudiantes/victp15-convocatoria.php'><img src='../recursos/imagenes/banner-convocatoria-verano2015.png' border='0' width='234' height='127' alt='Convocatoria XX Verano de la Investigación Científica y Tecnológica del Pacífico 2015' /></a></div>
 						<div class='bannerIzq'><a href='../programa/afiliadas.php'><img src='../recursos/imagenes/banner-directorio-consejeros2015.png' border='0' width='234' height='127' alt='Directorio de Consejeros Técnicos del Programa Delfín 2015' /></a></div>
@@ -220,11 +88,19 @@
 						<div class='bannerIzq'><a href='http://www.conacyt.gob.mx/FormacionCapitalHumano/Becas/feria/Documents/15a_Feria_de_Posgrados_de_Calidad-2014.pdf' target='_blank'><img src='../recursos/imagenes/banner-15feriaPosgradosCalidad.png' border='0' width='234' height='687' alt='15a Feria de Posgrados de Calidad 2014' /></a></div>
 						-->
 					</div>
-                </div>
-				
-				<div id='columnaDerecha'><div id='titulo'><img src='../recursos/imagenes/titulo-sesionconsejero.png' border='0' width='718' height='75' alt='Sesión de Consejero' /></div><div id='informacion'><h1>Control de Estudiantes Registrados</h1>
-<p class='centrar'><strong>A</strong> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=C'>C</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=E'>E</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=F'>F</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=G'>G</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=H'>H</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=J'>J</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=L'>L</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=M'>M</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=N'>N</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=O'>O</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=P'>P</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=Q'>Q</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=R'>R</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=T'>T</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=U'>U</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=V'>V</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=Z'>Z</a> | <a class='sinvineta' href='consejero-control-registrosest-consultar.php?letra=0'>Todos</a></p>
-<p><strong>Etiquetas:</strong> <strong>Fi:</strong>Ficha, <strong>So:</strong>Solicitud, <strong>Do:</strong>Documentos, <strong>Ev:</strong>Evaluado, <strong>Ac:</strong>Aceptado, <strong>Es:</strong>Estancia, <strong>Av:</strong>Aval, <strong>Re:</strong>Resumen, <strong>As:</strong>Asistirá al Congreso, <strong>Co:</strong>Congresista.</p><table id='tabla'>
+				</div>
+			  
+				<div id='columnaDerecha'>					<div id='titulo'><img src='../recursos/imagenes/titulo-divulgacion.png' border='0' width='718' height='75' alt='Divulgación' /></div>
+                    <div id='menuSeccion'>
+                        <ul>
+                            <li><a href='posgrados.php' title='Catálogo de Posgrados'><img src='../recursos/imagenes/menuseccion-posgrados.png' border='0' width='140' height='23' alt='Catálogo de Posgrados' /></a></li>
+                            <li><a href='divulgacion.php' title='Catálogo de Divulgación'><img src='../recursos/imagenes/menuseccion-divulgacion.png' border='0' width='140' height='23' alt='Catálogo de Divulgación' /></a></li>
+                            <li><a href='redes.php' title='Catálogo de Redes de Investigación'><img src='../recursos/imagenes/menuseccion-redes.png' border='0' width='140' height='23' alt='Catálogo de Redes de Investigación' /></a></li>
+                        </ul>
+                    </div>
+                    <div id='informacion'>
+                    	<h1>Catálogo de Posgrados</h1>
+                    	<p><table id='tabla'>
 <thead>
 <tr>
 <th width='28'>&nbsp;</th>
@@ -272,8 +148,8 @@
 <td class='centrar'><strong class='textorojo'>-</strong></td>
 <td class='centrar'><strong class='textorojo'>-</strong></td>
 </tbody>
-</table>
-</div>				</div>
+</table></p> </div>
+				</div>
 				<br class='clear' />
 			</div>
 			
