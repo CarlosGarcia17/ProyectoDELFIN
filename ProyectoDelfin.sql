@@ -68,7 +68,7 @@ INSERT INTO areas (idAreas, NumeroArea, Nombre) VALUES ('7', '7', 'Ingeniería e
 -- -----------------------------------------------------
 CREATE TABLE Posgrados (
   idPosgrados INT NOT NULL AUTO_INCREMENT,
-  NombreVARCHAR(50) NOT NULL,
+  Nombre VARCHAR(50) NOT NULL,
   PNPCP TINYINT(1) NOT NULL,
   Carrera VARCHAR(50) NOT NULL,
   Modalidad VARCHAR(10) NOT NULL,

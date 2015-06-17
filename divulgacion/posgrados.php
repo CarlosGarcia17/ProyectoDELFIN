@@ -10,14 +10,26 @@
 		<link href='../recursos/estilos/estilos-delfin.css' rel='stylesheet' type='text/css' />
 		<script src="../recursos/scripts/scripts-delfin.js" language="javascript" type="text/javascript"></script>
 		<script src="../recursos/librerias/ckeditor/ckeditor.js" language="javascript" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" language="javascript" type="text/javascript"></script>
 		<title>Posgrados - Divulgación - Programa Delfín</title>
+		<script >
+			function filtro1(){
+				$('#tabla tbody').remove();
+			$.ajax({
+				type: 'POST',
+				url: 'filtro.php',
+				data: {
+					fil: document.getElementById("pnpcp").value;
+				}
+			}).done(function(respuesta){
+				$('#filtrado').text(respuesta);
+			});
+			}
+		</script>
 	</head>
 
 	<body>
 		<div id='contenedor'>
-			
-			
-			
 			<div id='encabezado' title='Programa Delfín - Programa Interinstitucional para el Fortalecimiento de la Investigación y el Posgrado del Pacífico'>
 				<div id='logotipo'>
 					<a href='../' title='Inicio'><img src='../recursos/imagenes/delfin-logo.png' border='0' width='271' height='109' alt='Inicio' /></a>
@@ -100,54 +112,55 @@
                     </div>
                     <div id='informacion'>
                     	<h1>Catálogo de Posgrados</h1>
+
+                    	
+                    		<form id='filtros' ><div>
+                    		<label>Pnpc</label>
+							<input type="radio" name="pnpcp" value="si" onclick="filtro1()">Si
+							<input type="radio" name="pnpcp" value="no" onclick="filtro1()">No
+							</form>
+
+                    	
                     	<p><table id='tabla'>
 <thead>
 <tr>
-<th width='28'>&nbsp;</th>
-<th width='388'>Estudiante</th>
-<th width='40' class='centrar'>ID Del</th>
-<th width='20' class='centrar'>Fi</th>
-<th width='20' class='centrar'>So</th>
-<th width='20' class='centrar'>Do</th>
-<th width='20' class='centrar'>Ev</th>
-<th width='20' class='centrar'>Ac</th>
-<th width='20' class='centrar'>Es</th>
-<th width='20' class='centrar'>Av</th>
-<th width='20' class='centrar'>Re</th>
-<th width='20' class='centrar'>As</th>
-<th width='20' class='centrar'>Co</th>
-<tr>
+<th>&nbsp;</th>
+<th>Posgrado</th>
+<th class='centrar'>Carrera</th>
+<th class='centrar'>Area</th>
+<th class='centrar'>Estado</th>
+<th class='centrar'>Ciudad</th>
+<th class='centrar'>Instituto</th>
+<th class='centrar'>Modalidad</th>
+<th class='centrar'>Nivel</th>
+<th class='centrar'>Mas</th>
+</tr>
 </thead>
+<div id='filtrado'>
 <tbody>
-<tr onmouseover='cambiacolor(this,"1","1")' onmouseout='cambiacolor(this,"0","1")'>
-<td class='derecha'>1.</td>
-<td>Arizmendi Montes de Oca Frida del Carmen</td>
-<td class='centrar'>[00115]</td>
-<td class='centrar'><a class='sinvineta' href='estudiante-ficha-ver.php?id_delfin=00115' title='Ver Ficha de Datos'><img src='../recursos/imagenes/ficha-datos.gif' width='16' height='16' border='0' alt='Ver Ficha de Datos'></a></td>
-<td class='centrar'><a class='sinvineta' href='inicio-registroestudiante-solicitud.php?id_delfin=15980031604158636571235192478024790' title='Solicitud' target='_blank'><img src='../recursos/imagenes/reportes-imprimir.gif' width='16' height='16' border='0' alt='Solicitud'></a></td>
-<td class='centrar'><strong class='textoazul'>Si</strong></td>
-<td class='centrar'><strong class='textoazul'>Si</strong></td>
-<td class='centrar'><strong class='textoazul'>Si</strong></td>
-<td class='centrar'><strong class='textorojo'>-</strong></td>
-<td class='centrar'><strong class='textorojo'>-</strong></td>
-<td class='centrar'><strong class='textorojo'>-</strong></td>
-<td class='centrar'><strong class='textorojo'>-</strong></td>
-<td class='centrar'><strong class='textorojo'>-</strong></td>
-<tr class=alt onmouseover='cambiacolor(this,"1","2")' onmouseout='cambiacolor(this,"0","2")'>
-<td class='derecha'>2.</td>
-<td>Arzate Hoyos Ana Cecilia</td>
-<td class='centrar'>[06794]</td>
-<td class='centrar'><a class='sinvineta' href='estudiante-ficha-ver.php?id_delfin=06794' title='Ver Ficha de Datos'><img src='../recursos/imagenes/ficha-datos.gif' width='16' height='16' border='0' alt='Ver Ficha de Datos'></a></td>
-<td class='centrar'><a class='sinvineta' href='inicio-registroestudiante-solicitud.php?id_delfin=15980031604758636471235992478624790' title='Solicitud' target='_blank'><img src='../recursos/imagenes/reportes-imprimir.gif' width='16' height='16' border='0' alt='Solicitud'></a></td>
-<td class='centrar'><strong class='textoazul'>Si</strong></td>
-<td class='centrar'><strong class='textoazul'>Si</strong></td>
-<td class='centrar'><strong class='textoazul'>Si</strong></td>
-<td class='centrar'><strong class='textorojo'>-</strong></td>
-<td class='centrar'><strong class='textorojo'>-</strong></td>
-<td class='centrar'><strong class='textorojo'>-</strong></td>
-<td class='centrar'><strong class='textorojo'>-</strong></td>
-<td class='centrar'><strong class='textorojo'>-</strong></td>
+	<?php
+                  require_once ("Posgrado.php");
+                  $obj_con=new posgrados();
+                  $result=$obj_con->obtenerPosgrados();
+                   
+                  while($rows=mysql_fetch_array($result))
+                  {
+                         echo"<tr onmouseover='cambiacolor(this,1,1)' onmouseout='cambiacolor(this,0,1)'>
+<td></td>
+<td>".$rows['Nombre']."</td>
+<td class='centrar'><strong class='textoazul'>".$rows['Carrera']."</strong></td>
+<td class='centrar'><strong class='textoazul'>".$rows['Area']."</strong></td>
+<td class='centrar'><strong class='textoazul'>".$rows['Estado']."</strong></td>
+<td class='centrar'><strong class='textoazul'>".$rows['Ciudad']."</strong></td>
+<td class='centrar'><strong class='textoazul'>".$rows['Instituto']."</strong></td>
+<td class='centrar'><strong class='textoazul'>".$rows['Modalidad']."</strong></td>
+<td class='centrar'><strong class='textoazul'>".$rows['Nivel']."</strong></td>
+<td class='centrar'><strong class='textoazul'>".$rows['Status']."</strong></td>
+</tr>";
+                  }
+                  ?>
 </tbody>
+</div>
 </table></p> </div>
 				</div>
 				<br class='clear' />
